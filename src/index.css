@@ -1,29 +1,140 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background: #f8f9fa;
-  color: #333;
-}
+/* styles.css */
 
-header {
-  text-align: center;
-  padding: 40px 20px;
-  background-color: #4A90E2;
-  color: white;
-}
-
-.profile {
-  width: 120px;
-  border-radius: 50%;
-  margin-bottom: 10px;
-}
-
+/* General */
 section {
-  padding: 20px;
+  padding: 2rem;
   max-width: 800px;
   margin: auto;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  border-radius: 8px;
 }
 
 h2 {
-  color: #4A90E2;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #2A6F97; /* azul petróleo */
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+h3 {
+  font-size: 1.4rem;
+  margin-top: 1.5rem;
+  color: #444;
+  font-weight: 600;
+  border-left: 4px solid #70A9A1; /* azul celeste suave */
+  padding-left: 12px;
+}
+
+p, li {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+/* Header */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+  background-color: #2A6F97; /* azul petróleo */
+  box-shadow: 0 4px 15px rgba(42, 111, 151, 0.4);
+  border-radius: 0 0 20px 20px;
+  color: #fff;
+}
+
+.profile {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+  border: 4px solid #70A9A1; /* marco azul celeste suave */
+  box-shadow: 0 0 15px rgba(112, 169, 161, 0.5);
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.3rem;
+}
+
+.header p {
+  font-size: 1.3rem;
+  color: #d0e6e8;
+  font-weight: 500;
+}
+
+/* Projects */
+.projects-list li {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1rem;
+  transition: background-color 0.3s ease;
+  cursor: default;
+}
+
+.projects-list li:hover {
+  background-color: #f0f7f7;
+  border-left: 4px solid #2A6F97;
+  padding-left: 1rem;
+}
+
+/* Contact */
+.contact a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #70A9A1;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact a:hover {
+  color: #2A6F97;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  section {
+    padding: 1rem;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .header p {
+    font-size: 1.1rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Contenedor principal que se adapta a pantalla */
+.app-container {
+  max-width: 1200px; /* Máximo ancho para pantallas grandes */
+  margin: 0 auto; /* Centrar en pantalla grande */
+  padding: 0 20px; /* Padding lateral para que no quede pegado al borde */
+  box-sizing: border-box;
+}
+
+/* Para pantallas pequeñas, que todo use el 100% */
+@media (max-width: 768px) {
+  .app-container {
+    max-width: 100%;
+    padding: 0 10px;
+  }
 }

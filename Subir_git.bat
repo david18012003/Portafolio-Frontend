@@ -19,7 +19,8 @@ if not exist ".git" (
 
     :: Crear mensaje de commit con fecha y hora
     for /f %%i in ('powershell -command "Get-Date -Format yyyy-MM-dd_HH-mm-ss"') do set fecha=%%i
-    git commit -m "Actualización automática: %fecha%"
+    git commit -m "Actualización automática: %fecha% - %date% %time% frontend"
+    echo "Actualización automática: %fecha% - %date% %time% frontend"
 
     :: Hacer push
     git push origin main
