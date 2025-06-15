@@ -145,7 +145,7 @@ export default function FloatingChatDraggable() {
     setMensaje('');
 
     try {
-      const res = await axios.post(`${IP}/api/chatbot/chatbot`, { Mensaje: mensaje });
+      const res = await axios.post(`http://${IP}:3000/api/chatbot/chatbot`, { Mensaje: mensaje });
       const respuestaBot = res.data.response;
 
       setMensajes(prev => [
