@@ -1,4 +1,5 @@
-export const IP = "192.168.0.105" 
+// export const IP = "http://192.168.0.105:3000" 
+export const IP = "portafolio-backend-5evd.onrender.com"
 
 /*const getChatBoxPosition = () => {
   const screenWidth = window.innerWidth;

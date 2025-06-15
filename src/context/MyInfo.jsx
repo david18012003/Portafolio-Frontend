@@ -9,7 +9,7 @@ export function MyInfoProvider({ children }) {
   const fetchMyInfo = async () => {
     try {
       const mensaje = `Redacta un texto como si César, un desarrollador de software, estuviera contando su experiencia real en primera persona para mostrarla en su portafolio. Debe sonar profesional, humano y confiado. Describe lo que ha hecho, las herramientas que domina, los proyectos que ha desarrollado y lo que ha aprendido. No uses frases genéricas como "soy apasionado por la tecnología" ni introducciones innecesarias. Su experiencia incluye desarrollo backend con Node.js y Express, manejo de bases de datos MySQL, desarrollo frontend con React, testing QA manual y automatizado, así como proyectos con IA usando Cohere. Estudió un tecnólogo en ADSO y está cursando Ingeniería de Software.`; // etc.
-      const baseURL = "http://localhost:3000/api/chatbot/chatbot";
+      const baseURL = "portafolio-backend-5evd.onrender.com/api/chatbot/chatbot";
       const response = await axios.post(baseURL, { Mensaje: mensaje });
 
       console.log("Respuesta del servidor:", response.data);
