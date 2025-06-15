@@ -22,11 +22,7 @@ function App() {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-<<<<<<< HEAD
         const response = await axios.get(`${IP}/api/users/listar`);
-=======
-        const response = await axios.get(`https://portafolio-backend-1.onrender.com/api/users/listar`);
->>>>>>> f781ab1e637a2de18fbec7b5e7ee7e6a49bbb4f4
         setDataUser(response.data[0]);
       } catch (error) {
         console.error('❌ Error al cargar el usuario:', error);
@@ -42,11 +38,8 @@ function App() {
       if (!dataUser?.id) return;
 
       try {
-<<<<<<< HEAD
         const response = await axios.get(`${IP}/api/projects/listar/${dataUser.id}`);
-=======
-        const response = await axios.get(`https://portafolio-backend-1.onrender.com/api/projects/listar/${dataUser.id}`);
->>>>>>> f781ab1e637a2de18fbec7b5e7ee7e6a49bbb4f4
+
         setDataProjects(response.data);
       } catch (error) {
         console.error('❌ Error al cargar los proyectos:', error);
