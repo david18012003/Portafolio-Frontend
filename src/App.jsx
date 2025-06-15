@@ -12,7 +12,7 @@ import FloatingChatDraggable from './component/FloatingChatDraggable.jsx';
 
 // Contexto
 import { MyInfoProvider } from './context/MyInfo.jsx';
-import { IP } from './component/ipConfig.jsx';
+
 
 function App() {
   const [dataUser, setDataUser] = useState(null);
@@ -22,7 +22,7 @@ function App() {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const response = await axios.get(`http://${IP}:3000/api/users/listar`);
+        const response = await axios.get(`https://portafolio-backend-1.onrender.com/api/users/listar`);
         setDataUser(response.data[0]);
       } catch (error) {
         console.error('❌ Error al cargar el usuario:', error);
@@ -38,7 +38,7 @@ function App() {
       if (!dataUser?.id) return;
 
       try {
-        const response = await axios.get(`http://${IP}:3000/api/projects/listar/${dataUser.id}`);
+        const response = await axios.get(`https://portafolio-backend-1.onrender.com/api/projects/listar/${dataUser.id}`);
         setDataProjects(response.data);
       } catch (error) {
         console.error('❌ Error al cargar los proyectos:', error);
